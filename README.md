@@ -1,2 +1,10 @@
 # AdventOfCode2023
 I'm a cat meow
+
+I'm not going for speed this year so I'll just update this as I complete stars. I'll be on vacation and busy with life so my goal is to complete it by New Year's instead of Dec 25
+
+```
+      --------Part 1--------   --------Part 2--------
+Day       
+ 1    Nov 30                   Nov 30
+ 2  
