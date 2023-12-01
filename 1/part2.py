@@ -1,11 +1,11 @@
 import re
 
 # We can't regsub the entire string because sometimes letters overlap like
-# eighttwo which should result in 82. So this solution recognizes that
+# eightwo which should result in 82. This solution recognizes that
 # numbers only ever overlap by one letter so we just remove one letter
 # from each word. However doing them in numberical order has "ne"->1
-# then "ine"->9 and the "ne" matches the substring in "ine" so we swap
-# the order and match 9 first since it's a longer unique string. Credit to
+# then "ine"->9 and the "ne" matches the substring in "ine" and we swap
+# the order to match 9 first since it's a longer unique string. Credit to
 # Me-me for this brilliant solution.
 numbers_dict = {"ine":9,
                 "wo":2,
