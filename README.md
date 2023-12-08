@@ -14,3 +14,4 @@ Day
  5    Dec  4                   Dec  5                   part 2: work backwards to find the lowest solution and test 0->n until one works
  6    Dec  5                   Dec  5
  7    Dec  6                   Dec  6
+ 8    Dec  7                   Dec  7                   part 2: compute individual cycle times then get lowest common multiple of all of them
