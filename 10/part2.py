@@ -1,7 +1,6 @@
 # This is a gross solution but the only thing I could come up with. I didn't get any help or use a hint or anything so there's that.
-# The solution is to take the map from part 1 and blow each tile up into a 3x3 tile so we can record the channels where
-# area between parallel pipes connects things even when they are touching in a 1x1 tile size. I didn't bother doing anything sneaky
-# so I just hard coded the mapping.
+# The solution is to take the map from part 1 and blow each tile up into a 3x3 tile so we can articulate the inside and outside surfaces
+# even in areas between touching pipes in the 1x1 tile size. I didn't bother doing anything sneaky  so I just hard coded the mapping.
 
 
 filename = "input.txt"
