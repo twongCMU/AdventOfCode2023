@@ -17,3 +17,4 @@ Day
  8    Dec  7                   Dec  7                   part 2: compute individual cycle times then get lowest common multiple of all of them
  9    Dec  8                   Dec  8
 10    Dec  9                   Dec  9                   part 2: blew up a 140x140 map into 420x420 to articulate inside and outside edges
+11    Dec 10                   Dec 10                   don't store all of the data if you don't need it
