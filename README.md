@@ -18,3 +18,5 @@ Day
  9    Dec  8                   Dec  8
 10    Dec  9                   Dec  9                   part 2: blew up a 140x140 map into 420x420 to articulate inside and outside edges
 11    Dec 10                   Dec 10                   don't store all of the data if you don't need it
+12    Dec 11
+13    Dec 12                   Dec 12
