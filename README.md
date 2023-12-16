@@ -18,7 +18,8 @@ Day
  9    Dec  8                   Dec  8
 10    Dec  9                   Dec  9                   part 2: blew up a 140x140 map into 420x420 to articulate inside and outside edges
 11    Dec 10                   Dec 10                   don't store all of the data if you don't need it
-12    Dec 11
+12    Dec 11                   Dec 16                   part 2: overcomplicated the memoize step
 13    Dec 12                   Dec 12
 14    Dec 13                   Dec 13
-15    Dec 14
+15    Dec 14                   Dec 15
+16    Dec 15                   Dec 15
