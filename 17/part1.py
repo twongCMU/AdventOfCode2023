@@ -63,13 +63,12 @@ while len(paths):
     (route, heat_loss, last_direction, consecutive) = paths.pop(0)
     (x, y) = route[-1]
 
-    if y == 0 and x == 4:
-        print(f"route is {route}")
     # try going left 
     if x > 0 and direction_valid("l", last_direction, consecutive):
         new_heat_loss = heat_loss + graph[y][x-1]
-        if new_heat_loss < memoize[y][x-1] and (x-1, y) not in route:
-            memoize[y][x-1] = new_heat_loss
+        if new_heat_loss < (5+memoize[y][x-1]) and (x-1, y) not in route:
+
+
             new_route = route.copy()
             new_route.append((x-1, y))
 
@@ -80,11 +79,15 @@ while len(paths):
                 new_consecutive = 1
             paths.append((new_route, new_heat_loss, new_direction, new_consecutive))
 
+        if new_heat_loss < memoize[y][x-1]:
+            memoize[y][x-1] = new_heat_loss
+
     # try going right
     if x < width-1 and direction_valid("r", last_direction, consecutive):
         new_heat_loss = heat_loss + graph[y][x+1]
-        if new_heat_loss < memoize[y][x+1] and (x+1, y) not in route:
-            memoize[y][x+1] = new_heat_loss
+
+        if new_heat_loss < (5+memoize[y][x+1]) and (x+1, y) not in route:
+
             new_route = route.copy()
             new_route.append((x+1, y))
 
@@ -95,11 +98,16 @@ while len(paths):
                 new_consecutive = 1
             paths.append((new_route, new_heat_loss, new_direction, new_consecutive))
 
+
+        if new_heat_loss < memoize[y][x+1]:
+            memoize[y][x+1] = new_heat_loss
+
     # try going up
     if y > 0 and direction_valid("u", last_direction, consecutive):
         new_heat_loss = heat_loss + graph[y-1][x]
-        if new_heat_loss < memoize[y-1][x] and (x, y-1) not in route:
-            memoize[y-1][x] = new_heat_loss
+
+        if new_heat_loss < (5+memoize[y-1][x]) and (x, y-1) not in route:
+
             new_route = route.copy()
             new_route.append((x, y-1))
 
@@ -110,11 +118,15 @@ while len(paths):
                 new_consecutive = 1
             paths.append((new_route, new_heat_loss, new_direction, new_consecutive))
 
+        if new_heat_loss < memoize[y-1][x]:
+            memoize[y-1][x] = new_heat_loss
+
     # try going down
     if y < height -1 and direction_valid("d", last_direction, consecutive):
         new_heat_loss = heat_loss + graph[y+1][x]
-        if new_heat_loss < memoize[y+1][x] and (x, y+1) not in route:
-            memoize[y+1][x] = new_heat_loss
+
+        if new_heat_loss < (5+memoize[y+1][x]) and (x, y+1) not in route:
+
             new_route = route.copy()
             new_route.append((x, y+1))
 
@@ -125,6 +137,11 @@ while len(paths):
                 new_consecutive = 1
             paths.append((new_route, new_heat_loss, new_direction, new_consecutive))
 
+        if new_heat_loss < memoize[y+1][x]:
+            memoize[y+1][x] = new_heat_loss
+
+    print(f"{memoize[0]}")
+    print(f"paths is {len(paths)}")
 memoize[0][0] = 0
 print(f"{memoize}")
 print(f"Final: {memoize[-1][-1]}")
